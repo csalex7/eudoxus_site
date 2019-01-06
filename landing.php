@@ -15,7 +15,7 @@
   <!-- Page Features -->
 <div class="row text-center">
     <div class="col-lg-6 col-md-6 mb-4 zoom">
-      <a href="./student.php" >
+      <a href="student/student.php" >
         <div class="card">
           <img src="https://t4.ftcdn.net/jpg/02/14/43/85/240_F_214438597_pDCi3clz7emZMa50gnLxnSuYxKZnRYJ6.jpg" alt="">
           <div class="card-body">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="col-lg-6 col-md-6 mb-4 zoom">
-      <a href="./publisher2.php" >
+      <a href="/publisher/publisher.php" >
         <div class="card">
           <img src="https://t3.ftcdn.net/jpg/01/25/04/50/240_F_125045022_JNgpABu7bkkoJpMTNW9f5CDGhWRa3C8D.jpg" alt="">
           <div class="card-body">
@@ -41,7 +41,7 @@
 <div class="row text-center">
 
     <div class="col-lg-4 col-md-3 mb-3 zoom">
-      <a href="./secretary.php" >
+      <a href="secretary.php" >
         <div class="card">
           <img src="https://t4.ftcdn.net/jpg/01/87/27/89/240_F_187278968_xYEiwZek6ytCEIV1W3HBmuWAAsmb8QXv.jpg" alt="">
           <div class="card-body">
@@ -52,7 +52,7 @@
     </div>
 
      <div class="col-lg-4 col-md-3 mb-3 zoom">
-      <a href="./point.php" >
+      <a href="point.php" >
         <div class="card">
           <img src="https://t3.ftcdn.net/jpg/00/86/34/94/240_F_86349403_qzuEbSKffUyj6BGAyx9zGs42UrHk3QZj.jpg" alt="">
           <div class="card-body">
@@ -63,7 +63,7 @@
     </div>
 
     <div class="col-lg-4 col-md-3 mb-3 zoom">
-      <a href="./provider.php" >
+      <a href="provider.php" >
         <div class="card">
           <img src="https://t4.ftcdn.net/jpg/01/80/31/27/240_F_180312759_NR77AcexyxbgNEVpmrb9rdGFWWAUoxC1.jpg" alt="">
           <div class="card-body">

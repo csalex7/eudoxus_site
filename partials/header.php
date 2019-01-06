@@ -1,3 +1,7 @@
+<?php
+   session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <style>
@@ -86,8 +90,13 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>       
         </li>
-           <li class="signUpIn"><a class="badge badge-light" href="login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>
-           <li class="signUpIn" ><a  class="badge badge-light" href="signup.php">ΕΓΓΡΑΦΗ<i class="fas fa-user-plus"></i></a></li>		
+             <?php if(isset($_SESSION["login_user"])){ ?>
+                    <li class="signUpIn" ><a  class="badge badge-light" href="./logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-user-plus"></i></a></li>
+            <?php }
+             else { ?>
+                    <li class="signUpIn"><a class="badge badge-light" href="./login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>
+                    <li class="signUpIn" ><a  class="badge badge-light" href="/signup">ΕΓΓΡΑΦΗ<i class="fas fa-user-plus"></i></a></li>
+            <?php } ?>
       </ul>
     </div>
   </div>

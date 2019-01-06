@@ -20,7 +20,6 @@ include('../partials/header.php');
 <div style="display: none;" id="hidden_help">
 Μεταβείτε στην <a href="singin" target="_blank">σελίδα εγγραφής</a></br>
 Αν δεν έχετε δημιουργήσει λογαριασμό,<a href="singup" target="_blank">Δημιουργήστε λογαριασμό εκδότη</a></br>
-Μπλα μπλα μπλα
 </div>
 
 

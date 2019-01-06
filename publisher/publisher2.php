@@ -1,6 +1,6 @@
 <?php
-include_once 'Config.php';
-include('partials/header.php');
+include_once '../Config.php';
+include('../partials/header.php');
 ?>
 
 <nav aria-label="breadcrumb">
@@ -44,5 +44,5 @@ include('partials/header.php');
 
 
 <?php
-   include('partials/footer.php');
+   include('../partials/footer.php');
 ?>

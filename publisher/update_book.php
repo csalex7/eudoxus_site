@@ -7,6 +7,12 @@ if(isset($_GET['id'])){
 	$res = mysqli_query($db,$query);
 	$row= mysqli_fetch_array($res);
 }
+if(isset($_POST['newisbn'])){
+	$newisbn= $_POST['newisbn'];
+	$id=$_POST['id'];
+	$query="UPDATE suggrammata SET isbn='$newisbn' WHERE id='$id'";
+	$result = mysqli_query($db,$query);
+}
 if(isset($_POST['newtitle'])){
 	$newtitle= $_POST['newtitle'];
 	$id=$_POST['id'];

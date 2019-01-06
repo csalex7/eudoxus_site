@@ -90,10 +90,10 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>       
         </li>
-             <?php if(!isset($_SESSION["login_user"])){ ?>
+             <?php if(isset($_SESSION["login_user"])){  echo "naiiiiiiii"; ?>
                     <li class="signUpIn" ><a  class="badge badge-light" href="./logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-user-plus"></i></a></li>
             <?php }
-             else { ?>
+             else {  echo "oxiiiiiiiiii";  ?>
                     <li class="signUpIn"><a class="badge badge-light" href="./login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>
                     <li class="signUpIn" ><a  class="badge badge-light" href="/signup">ΕΓΓΡΑΦΗ<i class="fas fa-user-plus"></i></a></li>
             <?php } ?>

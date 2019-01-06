@@ -1,4 +1,4 @@
- <link href="./css/style.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
 
 <?php
    include("Config.php");

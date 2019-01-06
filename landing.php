@@ -26,7 +26,7 @@
     </div>
 
     <div class="col-lg-6 col-md-6 mb-4 zoom">
-      <a href="/publisher/publisher.php" >
+      <a href="publisher/publisher.php" >
         <div class="card">
           <img src="https://t3.ftcdn.net/jpg/01/25/04/50/240_F_125045022_JNgpABu7bkkoJpMTNW9f5CDGhWRa3C8D.jpg" alt="">
           <div class="card-body">

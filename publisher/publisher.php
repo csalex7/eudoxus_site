@@ -9,7 +9,7 @@ include('../partials/header.php');
     <li class="breadcrumb-item"><a href="/">Αρχική</a></li>
     <li class="breadcrumb-item active" aria-current="page">Εκδότης</li>
     <li class="options">
-          <p id="option1"><a class="badge badge-light" href="publisher_help.html">ΒΟΗΘΕΙΑ</a></p>
+          <p id="option1"><a class="badge badge-light" href="publisher_help.php">ΒΟΗΘΕΙΑ</a></p>
           <p id="option12"><a class="badge badge-light" href="/signin">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>      
         </li>
   </ol>

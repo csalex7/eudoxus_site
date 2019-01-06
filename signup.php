@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -55,7 +56,7 @@ button:hover {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
+  /*display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -113,13 +114,8 @@ hr {
 </style>
 <body>
 
-<h2>Modal Signup Form</h2>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-
 <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php" style="width : 45%;">
+  <form class="modal-content" method="POST" action="./sup.php" style="width : 45%;">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
@@ -140,8 +136,11 @@ hr {
       <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
         <button type="submit" class="signupbtn">Sign Up</button>
+        <a href="index.php">
+        <button type="button"  class="cancelbtn">Cancel</button>
+        </a>
+        
       </div>
     </div>
   </form>

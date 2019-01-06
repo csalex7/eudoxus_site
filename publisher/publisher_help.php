@@ -8,7 +8,7 @@ include('../partials/header.php');
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
     <li class="breadcrumb-item"><a href="/">Αρχική</a></li>
-    <li class="breadcrumb-item"><a href="publisher.html">Εκδότης</a></li>
+    <li class="breadcrumb-item"><a href="publisher.php">Εκδότης</a></li>
     <li class="breadcrumb-item active" aria-current="page">Βοήθεια</li>
   </ol>
 </nav>

@@ -1,6 +1,7 @@
 <?php
    include('partials/header.php');
 ?>
+<link href="css/app.css" rel="stylesheet">
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
@@ -87,5 +88,5 @@
 <!-- /.container -->
 
 <?php
-   include('partials/footer.php');
+   include('partials/footer.html');
 ?>

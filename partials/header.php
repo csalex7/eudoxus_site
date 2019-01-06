@@ -1,3 +1,7 @@
+<?php
+   session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <style>
@@ -25,7 +29,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/"><i class="far fa-books"></i>ΕΥΔΟΞΟΣ</a>
+    <a class="navbar-brand" href="../landing.php"><i class="far fa-books"></i>ΕΥΔΟΞΟΣ</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -86,13 +90,27 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>       
         </li>
-           <li class="signUpIn"><a class="badge badge-light" href="login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>
-           <li class="signUpIn" ><a  class="badge badge-light" href="signup.php">ΕΓΓΡΑΦΗ<i class="fas fa-user-plus"></i></a></li>		
+             <?php if(isset($_SESSION['login_user'])){  ?>
+                    <li class="signUpIn" ><a  class="badge badge-light" href="./logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-user-plus"></i></a></li>
+            <?php }
+             else {   ?>
+                    <li class="signUpIn"><a class="badge badge-light" href="./login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>
+                    <li class="signUpIn" ><a  class="badge badge-light" href="/signup">ΕΓΓΡΑΦΗ<i class="fas fa-user-plus"></i></a></li>
+            <?php } ?>
       </ul>
     </div>
   </div>
 
 </nav>
 
+     
+<?php if(isset($_SESSION['login_user'])){ ?>
+      <div id="profile">
+        Συνδεδεμένος ως <?php echo $_SESSION['login_user']; ?>
+          <a href="/" class="badge badge-light" >
+            Επεξεργασία Προφίλ
+          </a>
+      </div>
+<?php } ?>
 
 

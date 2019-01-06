@@ -1,3 +1,5 @@
+ <link href="css/style.css" rel="stylesheet">
+
 <?php
    include("Config.php");
    session_start();
@@ -20,7 +22,7 @@
       if($count == 1) {
          $_SESSION['login_user'] = $myusername;
          
-         header("location: welcome.php");
+         header("location: landing.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }

@@ -3,6 +3,8 @@ include_once '../Config.php';
 include('../partials/header.php');
 ?>
 
+<link href="../css/publisher.css" rel="stylesheet">
+
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
     <li class="breadcrumb-item"><a href="/">Αρχική</a></li>

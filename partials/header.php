@@ -87,7 +87,8 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>       
         </li>
-		
+           <li class="signUpIn"><a class="badge badge-light" href="/signin">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>
+           <li class="signUpIn" ><a  class="badge badge-light" href="/signup">ΕΓΓΡΑΦΗ<i class="fas fa-user-plus"></i></a></li>		
       </ul>
     </div>
   </div>

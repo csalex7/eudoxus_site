@@ -2,6 +2,8 @@
 include_once('../partials/header.php');
 ?>
 
+<link href="../css/student2.css" rel="stylesheet">
+
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
     <li class="breadcrumb-item"><a href="/">Αρχική</a></li>

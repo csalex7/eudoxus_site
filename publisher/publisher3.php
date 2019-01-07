@@ -15,6 +15,7 @@
 
 
 <a href="publisher2.php" class="previous">&#8678;Πίσω</a>
+
 <div align="center" class="container_form">
 <form action="add_book.php?username=publisher2" method="POST">
 

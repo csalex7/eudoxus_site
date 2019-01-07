@@ -10,7 +10,7 @@ img {
 }
 
 .previous {
-  background-color: #4CAF50;
+  background-color: red;
   border: none;
   color: white;
   padding: 10px 25px;
@@ -21,6 +21,23 @@ img {
   margin: 5% 5%;
   cursor: pointer;
   position: absolute;
+  bottom: 10%;
+  left: 10%;
+  
+}
+
+.previous2 {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 5% 5%;
+  cursor: pointer;
+  position: sticky;
   bottom: 10%;
   left: 10%;
   
@@ -45,12 +62,14 @@ img {
 
 .container_form {
   width: 100%;
-  clear: both;
+  display: inline-block;
+  text-align: center;
 }
 
 .container_form input {
   width: 100%;
   clear: both;
+  font-size: 20px;
 }
 
 input[type=text]{
@@ -114,9 +133,20 @@ input[type=submit] {
 }
 
 .book_list {
-  text-align:left;
-  padding: 5%;
-  margin: 3%;
-  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+
+}
+
+.book_container{
+  position: center;
+  text-align: center;
+  border-style: solid;
+  border-color: green;
+  font-size: 20px; 
+  width: 100%;
 
 }

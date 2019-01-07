@@ -1,5 +1,11 @@
 <?php
 include_once '../Config.php';
+?>
+<link href="../css/publisher.css" rel="stylesheet">
+<link href="../css/app.css" rel="stylesheet">
+
+<?php
+
 $result=0;
 if(isset($_GET['id'])){
 	$id=$_GET['id'];
@@ -40,8 +46,8 @@ if($result){
 }
 
 ?>
-
-<form action="update_book.php" method="POST">
+<div class="container_form" >
+<form action="update_book.php" class="container_form" method="POST">
 Τίτλος: <input type="text" name="newtitle" value="<?php echo $row[1]; ?>"></br>
 ISBN: <input type="text" name="newisbn" value="<?php echo $row[2]; ?>"></br>
 Συγγραφέας: <input type="text" name="newauthor" value="<?php echo $row[3]; ?>"></br>
@@ -52,3 +58,4 @@ ISBN: <input type="text" name="newisbn" value="<?php echo $row[2]; ?>"></br>
 
 <input type="submit" value="Τροποποίηση">
 </form>
+</div>

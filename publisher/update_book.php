@@ -7,37 +7,39 @@ include_once '../Config.php';
 <?php
 
 $result=0;
-if(isset($_GET['id'])){
-	$id=$_GET['id'];
-	$query="SELECT * FROM suggrammata WHERE id='$id'";
+if(isset($_GET['isbn'])){
+	$isbn=$_GET['isbn'];
+	$query="SELECT books.title,books.isbn,books.author,books.category,suggramata_ekdoti.quantinty FROM users,suggramata_ekdoti,books WHERE users.category='ekdotis' and users.username='ekdotis2' and suggramata_ekdoti.username_ekdoti='ekdotis2' and suggramata_ekdoti.isbn=books.isbn and books.isbn='$isbn';"; /*anti gia ekdotis1 to kanoniko username*/
 	$res = mysqli_query($db,$query);
 	$row= mysqli_fetch_array($res);
 }
 if(isset($_POST['newisbn'])){
 	$newisbn= $_POST['newisbn'];
-	$id=$_POST['id'];
-	$query="UPDATE suggrammata SET isbn='$newisbn' WHERE id='$id'";
+	$isbn=$_POST['isbn'];
+	$query="UPDATE suggramata_ekdoti SET isbn='$newisbn' WHERE isbn='$isbn' ";
+	$result = mysqli_query($db,$query);
+	$query="UPDATE books SET isbn='$newisbn' WHERE isbn='$isbn' ";
 	$result = mysqli_query($db,$query);
 }
 if(isset($_POST['newtitle'])){
 	$newtitle= $_POST['newtitle'];
-	$id=$_POST['id'];
-	$query="UPDATE suggrammata SET title='$newtitle' WHERE id='$id'";
+	$isbn=$_POST['isbn'];
+	$query="UPDATE books SET title='$newtitle' WHERE isbn='$isbn' ; ";
 	$result = mysqli_query($db,$query);
 }
 if(isset($_POST['newauthor'])){
 	$newauthor=$_POST['newauthor'];
-	$query="UPDATE suggrammata SET author='$newauthor' WHERE id='$id'";
+	$query="UPDATE books SET author='$newauthor' WHERE isbn='$isbn'";
 	$result = mysqli_query($db,$query);
 }
 if(isset($_POST['newcategory'])){
 	$newcategory=$_POST['newcategory'];
-	$query="UPDATE suggrammata SET category='$newcategory' WHERE id='$id'";
+	$query="UPDATE books SET category='$newcategory' WHERE isbn='$isbn'";
 	$result = mysqli_query($db,$query);
 }
-if(isset($_POST['newquantity'])){
-	$newquantity=$_POST['newquantity'];
-	$query="UPDATE suggrammata SET quantity='$newquantity' WHERE id='$id'";
+if(isset($_POST['newquantinty'])){
+	$newquantinty=$_POST['newquantinty'];
+	$query="UPDATE suggramata_ekdoti SET quantinty='$newquantinty' WHERE isbn='$isbn'";
 	$result = mysqli_query($db,$query);
 }
 //echo "<meta http-equiv='refresh' content='0:url=publisher2.php'>";
@@ -48,12 +50,12 @@ if($result){
 ?>
 <div class="container_form" >
 <form action="update_book.php" class="container_form" method="POST">
-Τίτλος: <input type="text" name="newtitle" value="<?php echo $row[1]; ?>"></br>
-ISBN: <input type="text" name="newisbn" value="<?php echo $row[2]; ?>"></br>
-Συγγραφέας: <input type="text" name="newauthor" value="<?php echo $row[3]; ?>"></br>
-Κατηγορία: <input type="text" name="newcategory" value="<?php echo $row[4]; ?>"></br>
-Διαθέσιμα αντίτυπα: <input type="text" name="newquantity" value="<?php echo $row[5]; ?>"></br>
-<input type="hidden" name="id" value="<?php echo $row[0]; ?>">
+Τίτλος: <input type="text" name="newtitle" value="<?php echo $row[0]; ?>"></br>
+ISBN: <input type="text" name="newisbn" value="<?php echo $row[1]; ?>"></br>
+Συγγραφέας: <input type="text" name="newauthor" value="<?php echo $row[2]; ?>"></br>
+Κατηγορία: <input type="text" name="newcategory" value="<?php echo $row[3]; ?>"></br>
+Διαθέσιμα αντίτυπα: <input type="text" name="newquantinty" value="<?php echo $row[4]; ?>"></br>
+<input type="hidden" name="isbn" value="<?php echo htmlspecialchars($_GET["isbn"]); ?>">
 
 
 <input type="submit" value="Τροποποίηση">

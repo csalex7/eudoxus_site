@@ -20,7 +20,7 @@ include('../partials/header.php');
   
 
   <?php
-  $query="SELECT * FROM suggrammata WHERE publisher_username='publisher2';";
+  $query="SELECT books.title,books.isbn,books.author,books.category,suggramata_ekdoti.quantinty FROM users,suggramata_ekdoti,books WHERE users.category='ekdotis' and users.username='ekdotis2' and suggramata_ekdoti.username_ekdoti='ekdotis2' and suggramata_ekdoti.isbn=books.isbn ;"; /*anti gia ekdotis1 to kanoniko username*/
   $result = mysqli_query($db,$query);
   $resultCheck= mysqli_num_rows($result);
   if ($resultCheck > 0) {
@@ -33,9 +33,9 @@ include('../partials/header.php');
       echo "ISBN:". $row['isbn']; echo "<br>";
       echo "Συγγραφέας:". $row['author']; echo "<br>";
       echo "Κατηγορία:". $row['category']; echo "<br>";
-      echo "Διαθέσιμα Αντίτυπα:". $row['quantity']; echo "<br>";
-      echo "<a href=delete_book.php?id=".$row['id'].">Αφαίρεση</a>"; echo "<br>";
-      echo "<a href=update_book.php?id=".$row['id'].">Αλλαγή στοιχείων</a>";
+      echo "Διαθέσιμα Αντίτυπα:". $row['quantinty']; echo "<br>";
+      echo "<a href=delete_book.php?isbn=".$row['isbn'].">Αφαίρεση</a>"; echo "<br>";
+      echo "<a href=update_book.php?isbn=".$row['isbn'].">Αλλαγή στοιχείων</a>";
       ?>
       </p>
         <?php

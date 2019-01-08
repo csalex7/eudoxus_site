@@ -2,7 +2,7 @@
 include_once('../partials/header.php');
 ?>
 
-<link href="../css/student2.css" rel="stylesheet">
+<link href="../css/student.css" rel="stylesheet">
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">

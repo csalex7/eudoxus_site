@@ -1,5 +1,6 @@
 <?php
 	include_once '../Config.php';
+	include '../partials/header.php';
 
 	$title= $_POST['title'];
 	$isbn= $_POST['ISBN'];

@@ -20,9 +20,11 @@ include('../partials/header.php');
   
 
   <?php
-  $query="SELECT books.title,books.isbn,books.author,books.category,suggramata_ekdoti.quantinty FROM users,suggramata_ekdoti,books WHERE users.category='ekdotis' and users.username='ekdotis2' and suggramata_ekdoti.username_ekdoti='ekdotis2' and suggramata_ekdoti.isbn=books.isbn ;"; /*anti gia ekdotis1 to kanoniko username*/
+  $username = $_SESSION['login_user'] ;
+  $query="SELECT books.title,books.isbn,books.author,books.category,suggramata_ekdoti.quantinty FROM users,suggramata_ekdoti,books WHERE users.username='$username' and suggramata_ekdoti.isbn=books.isbn and suggramata_ekdoti.username_ekdoti=users.username ;"; /*anti gia ekdotis1 to kanoniko username*/
   $result = mysqli_query($db,$query);
   $resultCheck= mysqli_num_rows($result);
+
   if ($resultCheck > 0) {
     while($row= mysqli_fetch_assoc($result)){
     ?>

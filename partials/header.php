@@ -22,7 +22,9 @@
     <!-- Custom styles for this template -->
     <link href="../css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="../student/student.js"></script>
   </head>
 
   <body>
@@ -55,7 +57,7 @@
             <a class="dropdown-item" href="#">Another action</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
-          </div>        
+          </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link badge dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,7 +68,7 @@
             <a class="dropdown-item" href="#">Another action</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
-          </div>        
+          </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link badge dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,7 +79,7 @@
             <a class="dropdown-item" href="#">Another action</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
-          </div>  
+          </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link badge dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -88,7 +90,7 @@
             <a class="dropdown-item" href="#">Another action</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
-          </div>       
+          </div>
         </li>
              <?php if(isset($_SESSION['login_user'])){  ?>
                     <li class="signUpIn" ><a  class="badge badge-light" href="./logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-user-plus"></i></a></li>
@@ -103,7 +105,7 @@
 
 </nav>
 
-     
+
 <?php if(isset($_SESSION['login_user'])){ ?>
       <div id="profile">
         Συνδεδεμένος ως <?php echo $_SESSION['login_user']; ?>
@@ -112,5 +114,3 @@
           </a>
       </div>
 <?php } ?>
-
-

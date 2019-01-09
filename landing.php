@@ -1,7 +1,7 @@
 <?php
    include('partials/header.php');
 ?>
-<link href="css/app.css" rel="stylesheet">
+
 <link href="css/student.css" rel="stylesheet">
 
 <nav aria-label="breadcrumb">

@@ -1,5 +1,6 @@
 <?php
 include_once '../Config.php';
+include_once '../partials/header.php'
 ?>
 
 <link href="../css/student.css" rel="stylesheet">

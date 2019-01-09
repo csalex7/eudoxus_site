@@ -1,13 +1,15 @@
 <?php
 	include_once '../Config.php';
-	include '../partials/header.php';
+	//include '../partials/header.php';
+
+	session_start();
 
 	$title= $_POST['title'];
 	$isbn= $_POST['ISBN'];
 	$author= $_POST['author'];
 	$category= $_POST['category'];
 	$available_books= $_POST['available_books'];
-	$publisher_username=$_GET['username'];
+	$publisher_username=$_SESSION['login_user'] ;
 
 	$query= "SELECT * FROM books WHERE isbn = '$isbn'";
 	$result=mysqli_query($db,$query);

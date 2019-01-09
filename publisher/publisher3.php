@@ -15,9 +15,11 @@
 
 
 <a href="publisher2.php" class="previous">&#8678;Πίσω</a>
-
+<?php 
+ $username = $_SESSION['login_user'] ;
+?>
 <div align="center" class="container_form">
-<form action="add_book.php?username=ekdotis2" method="POST"> <!--allagi to username -->
+<form action="add_book.php" method="POST"> <!--allagi to username -->
 
 <label for="title">Τίτλος:</label>  <input type="text" name="title" /><br/>
 <label for="ISBN">ISBN:</label>  <input type="text" name="ISBN" /><br/>

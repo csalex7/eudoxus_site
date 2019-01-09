@@ -5,11 +5,13 @@ include_once '../Config.php';
 <link href="../css/app.css" rel="stylesheet">
 
 <?php
+session_start();
+$user=$_SESSION['login_user'];
 
 $result=0;
 if(isset($_GET['isbn'])){
 	$isbn=$_GET['isbn'];
-	$query="SELECT books.title,books.isbn,books.author,books.category,suggramata_ekdoti.quantinty FROM users,suggramata_ekdoti,books WHERE users.category='ekdotis' and users.username='ekdotis2' and suggramata_ekdoti.username_ekdoti='ekdotis2' and suggramata_ekdoti.isbn=books.isbn and books.isbn='$isbn';"; /*anti gia ekdotis1 to kanoniko username*/
+	$query="SELECT books.title,books.isbn,books.author,books.category,suggramata_ekdoti.quantinty FROM users,suggramata_ekdoti,books WHERE users.category='ekdotis' and users.username='$user' and suggramata_ekdoti.username_ekdoti='$user' and suggramata_ekdoti.isbn=books.isbn and books.isbn='$isbn';"; /*anti gia ekdotis1 to kanoniko username*/
 	$res = mysqli_query($db,$query);
 	$row= mysqli_fetch_array($res);
 }

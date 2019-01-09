@@ -4,7 +4,9 @@ body {
 }
 
 
-
+.card-body {
+	padding: 0;
+}
 
 .card {
   height: 100%;

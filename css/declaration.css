@@ -1,0 +1,79 @@
+#uni {
+    width:50%;
+}
+
+
+.input-append .btn.dropdown-toggle {
+    float: none;
+}
+
+#back {
+    margin-right: 35%;;
+}
+
+#back2 {
+    margin-top: 230px;
+    margin-left: 250px;
+}
+
+#myDiv {
+    background-color: green;
+}
+
+.small {
+    margin-left: 2em;
+}
+
+.btn.btn-lg.btn-primary {
+    margin-left: 80%;
+    display: inline-block;
+
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.inner
+{
+    display: inline-block;
+}
+
+.inner2
+{
+    display: inline-block;
+}
+
+.jumbotron {
+    background-color: rgb(107, 107, 71);
+    color: white;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card_divs {
+    margin-bottom: -30px;
+    margin-top: -30px;
+}
+
+.vscrolling_container {
+    height: 100%;
+    overflow: auto;
+}
+
+a:hover{
+    color: white;
+
+}
+
+#store2 {
+    margin-left: 78%;
+    width:100px;
+    height: 100px;
+}

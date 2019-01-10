@@ -7,12 +7,12 @@ include_once('../partials/header.php');
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
-    <li class="breadcrumb-item"><a href="/">Αρχική</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Φοιτητής</li>
-    <li class="breadcrumb-item active" aria-current="page">Δήλωση Μαθημάτων</li>
+    <li class="breadcrumb-item"><a href="/eudoxus_site/landing.php">Αρχική</a></li>
+    <li class="breadcrumb-item" aria-current="page"><a href="/eudoxus_site/student/student.php">Φοιτητής</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Δήλωση Συγγραμμάτων</li>
         <li class="options">
-          <p id="option1"><a class="badge badge-light" href="/signin">ΒΟΗΘΕΙΑ</a></p>
-          <p id="option12"><a class="badge badge-light" href="/signin">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>
+          <p id="option1"><a class="badge badge-light" href="#">ΒΟΗΘΕΙΑ</a></p>
+          <p id="option12"><a class="badge badge-light" href="#">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>
         </li>
   </ol>
 </nav>
@@ -60,9 +60,12 @@ include_once('../partials/header.php');
 
 
 
-<a href="declaration.php" >
-<button  id="back" type="button" class="btn btn-secondary btn-md">&#8678;Πίσω</button>
-</a>
+<div id="back2">
+    <a href="declaration.php">
+        <button  type="button" class="btn btn-secondary btn-md">&#8678;Πίσω</button>
+    </a>
+</div>
+
 
 
 <?php

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('../Config.php');
 include_once('../partials/header.php');
 ?>
@@ -12,10 +13,6 @@ include_once('../partials/header.php');
     <li class="breadcrumb-item"><a href="/eudoxus_site/landing.php">Αρχική</a></li>
     <li class="breadcrumb-item" aria-current="page"><a href="/eudoxus_site/student/student.php">Φοιτητής</a></li>
     <li class="breadcrumb-item active" aria-current="page">Δήλωση Συγγραμμάτων</li>
-        <li class="options">
-          <p id="option1"><a class="badge badge-light" href="#">ΒΟΗΘΕΙΑ</a></p>
-          <p id="option12"><a class="badge badge-light" href="#">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>
-        </li>
   </ol>
 </nav>
 
@@ -63,8 +60,24 @@ include_once('../partials/header.php');
                                             ?>
                                             <div class="card_divs">
                                                 <a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox" name="isbn[]" value="<?php echo $isbn;?>" />&nbsp;<?php echo $book; ?>
+                                                    <?php
+                                                        $query4="SELECT books.bookstore FROM books WHERE books.isbn ='$isbn';";
+                                                        $result4 = mysqli_query($db,$query4);
+                                                        $row4= mysqli_fetch_assoc($result4);
+                                                        $bookstore_id = $row4['bookstore'];
+
+                                                        $query5="SELECT bookstores.name,bookstores.address,bookstores.phone,bookstores.hours FROM bookstores WHERE bookstores.id ='$bookstore_id';";
+                                                        $result5 = mysqli_query($db,$query5);
+                                                        $row5= mysqli_fetch_assoc($result5);
+                                                        $bookstore_name = $row5['name'];
+                                                        $bookstore_address = $row5['address'];
+                                                        $bookstore_phone = $row5['phone'];
+                                                        $bookstore_hours = $row5['hours'];
+
+                                                    ?>
                                                     <p class="signUpIn inner">
-                                                        <a class="badge badge-light" href="/eudoxus_site/login.php">Παραλαβή από..</a>
+                                                            <?php $content="lslsl"; $content.="<\n>";  $content.="slspss"; ?>
+                                                          <a class="badge badge-light bookstore" href="#" data-toggle="popover" data-html="true" title="ΠΛΗΡΟΦΟΡΙΕΣ" data-placement="top" data-content="Όνομα βιβλιοπωλείου: <?php echo $bookstore_name ?> <br/> Διεύθυνση: <?php echo $bookstore_address ?> <br/> Τηλέφωνο: <?php echo $bookstore_phone ?> <br/> Ώρες Λειτουργείας: <?php echo $bookstore_hours ?>">Παραλαβή από..</a>
                                                     </p>
                                                 </a>
                                             </div>
@@ -93,19 +106,19 @@ include_once('../partials/header.php');
         </div>
     </div>
 
-<div id="outer">
-    <div class="inner" id="back">
-        <a href="declaration2.php">
-            <button  type="button" class="btn btn-secondary btn-md">&#8678;Πίσω</button>
-        </a>
-    </div>
-    <div class="inner">
-        <a href="declaration4.php">
-            <button type="submit" value="submit" class="btn btn-lg btn-primary">Υποβολή Δήλωσης</button>
-        </a>
-    </div>
-</div>
 
+    <div id="outer">
+        <div class="inner" id="back">
+            <a href="declaration2.php">
+                <button  type="button" class="btn btn-secondary btn-md">&#8678;Πίσω</button>
+            </a>
+        </div>
+        <div class="inner">
+            <a href="declaration4.php">
+                <button type="submit" value="submit" class="btn btn-lg btn-primary">Υποβολή Δήλωσης</button>
+            </a>
+        </div>
+    </div>
 </form>
 
 

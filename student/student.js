@@ -56,3 +56,9 @@ function myFunction5() {
     div5.style.display = "none";
   }
 }
+
+
+
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
+});

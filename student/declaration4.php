@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('../Config.php');
 include_once('../partials/header.php');
 ?>
@@ -20,12 +21,25 @@ include_once('../partials/header.php');
 
 
 <?php
-    $name = $_GET['isbn'];
-    $student = $_SESSION['login_user'];
-    foreach ($name as $isbn){
-        $query="INSERT INTO dhlwseis(foititis,isbn) VALUES ('$student','$isbn');";
-        mysqli_query($db,$query);
+    if(!empty($_GET['isbn'])) {
+        $name = $_GET['isbn'];
+        $student = $_SESSION['login_user'];
+        foreach ($name as $isbn){
+            $query="INSERT INTO dhlwseis(foititis,isbn) VALUES ('$student','$isbn');";
+            mysqli_query($db,$query);
+        }
     }
+    else {
+        if (headers_sent()) {
+            echo "Δεν επιλέξατε κανένα σύγγραμμα";
+            echo $_GET['semester2'];
+            ?>
+                <a class="badge badge-light" href="declaration3.php">Πίσω στην Δήλωση</a>
+            <?php
+            die();
+        }
+    }
+
 ?>
 
 

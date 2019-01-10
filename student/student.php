@@ -29,7 +29,7 @@ include_once('../partials/header.php');
     </div>
 
     <div class="col-lg-6 col-md-6 mb-4 zoom">
-        <a href="book_list.php?username=nikos" > <!-- allagi se username -->
+        <a href="book_list.php?username=<?php $_SESSION['login_user'] ?>" > <!-- allagi se username -->
           <div class="card">
             <img src="https://images.unsplash.com/photo-1471970471555-19d4b113e9ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
             <div class="card-body">

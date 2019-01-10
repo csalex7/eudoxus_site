@@ -117,7 +117,7 @@
 <?php if(isset($_SESSION['login_user'])){ ?>
       <div id="profile">
         Συνδεδεμένος ως <?php echo $_SESSION['login_user']; ?>
-          <a href="/" class="badge badge-light" >
+          <a href="/eudoxus_site/edit_profile.php" class="badge badge-light" >
             Επεξεργασία Προφίλ
           </a>
       </div>

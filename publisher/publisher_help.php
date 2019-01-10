@@ -18,8 +18,8 @@ include('../partials/header.php');
 
 <a href="#" class="clickable_help" onclick="toggle_visibility('hidden_help');">Οδηγίες σύνδεσης</a>
 <div style="display: none;" id="hidden_help">
-Μεταβείτε στην <a href="singin" target="_blank">σελίδα εγγραφής</a></br>
-Αν δεν έχετε δημιουργήσει λογαριασμό,<a href="singup" target="_blank">Δημιουργήστε λογαριασμό εκδότη</a></br>
+Μεταβείτε στην <a href="eudoxus_site/singin" target="_blank">σελίδα εγγραφής</a></br>
+Αν δεν έχετε δημιουργήσει λογαριασμό,<a href="eudoxus_site/singup" target="_blank">Δημιουργήστε λογαριασμό εκδότη</a></br>
 </div>
 
 
@@ -30,7 +30,7 @@ include('../partials/header.php');
 <div style="display: none;" id="hidden_help2">
 <ol>
   <li>Συνδεθείτε στο σύστημα χρησιμοποιώντας το username και το password που δηλώσατε κατά την εγγραφή σας</li>
-  <li>Μεταβείτε στην <a href="publisher2.html" target="_blank">Διαχείρηση Συγγραμμάτων</a></li>
+  <li>Μεταβείτε στην <a href="eudoxus_site/publisher/publisher2.php" target="_blank">Διαχείρηση Συγγραμμάτων</a></li>
   <li>Αν θέλετε να επεξεργαστείτε τα ήδη προσφερόμενα συγγράμματα,έχετε την δυνατότητα αφαίρεσης συγγράμματος ή επεξεργασίας των δηλωθέντων στοιχείων του</li>
   <li>Αν θέλετε να προσθέσετε ένα σύγγραμμα ακολουθήστε τα παρακάτω βήματα</li>
   <ol>

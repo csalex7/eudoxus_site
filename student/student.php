@@ -53,7 +53,7 @@ include_once('../partials/header.php');
     </div>
 
     <div class="col-lg-6 col-md-6 mb-4 zoom">
-        <a href="/student" >
+        <a href="/eudoxus_site/student/edit_declaration.php" >
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0bUEKPoWfZ7ElVD0wKugFxRWTylC2GkwK88zBkR1RnziDJomYdw" alt="">
             <div class="card-body">

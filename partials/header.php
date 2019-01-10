@@ -95,7 +95,7 @@
           </div>
         </li>
              <?php if(isset($_SESSION['login_user'])){  ?>
-                    <li class="signUpIn" ><a  class="badge badge-light" href="../eudoxus_site/logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-user-plus"></i></a></li>
+                    <li class="signUpIn" ><a  class="badge badge-light" href="/eudoxus_site/logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-user-plus"></i></a></li>
             <?php }
              else {   ?>
                     <li class="signUpIn"><a class="badge badge-light" href="/eudoxus_site/login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>

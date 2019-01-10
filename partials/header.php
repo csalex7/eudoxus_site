@@ -1,6 +1,9 @@
 <?php
-   session_start();
- ?>
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,9 +34,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="../landing.php">
-      <i class="fas fa-book"></i> ΕΥΔΟΞΟΣ
-    </a>
+    <a class="navbar-brand" href="../landing.php"> <i class="fas fa-book"></i> ΕΥΔΟΞΟΣ</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,10 +45,13 @@
             ΦΟΙΤΗΤΗΣ
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="/eudoxus_site/student/declaration.php">Δήλωση Συγγραμμάτων</a>
+            <a class="dropdown-item" href="#">Τροποποίηση Δήλωσης</a>
+            <a class="dropdown-item" href="#">Ανταλλαγή Συγγραμμάτων</a>
+            <a class="dropdown-item" href="#">Λίστα Συγγραμμάτων</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Αναζήτηση Συγγραμμάτων</a>
+            <a class="dropdown-item" href="#">Βοήθεια</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -55,10 +59,11 @@
             ΕΚΔΟΤΗΣ
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="/eudoxus_site/publisher/publisher2.php">Διαχείρηση Συγγραμμάτων</a>
+            <a class="dropdown-item" href="#">Υπηρεσία Ταχυμεταφοράς</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Αναζήτηση Συγγραμμάτων</a>
+            <a class="dropdown-item" href="#">Βοήθεια</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -111,7 +116,7 @@
 <?php if(isset($_SESSION['login_user'])){ ?>
       <div id="profile">
         Συνδεδεμένος ως <?php echo $_SESSION['login_user']; ?>
-          <a href="/eudoxus_site/edit_profile.php" class="badge badge-light" >
+          <a href="/" class="badge badge-light" >
             Επεξεργασία Προφίλ
           </a>
       </div>

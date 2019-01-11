@@ -8,7 +8,7 @@ include_once '../partials/header.php'
 
 
 <?php
-$user=$_GET['username'];
+$user=$_SESSION['login_user'];
 /*$query="SELECT books.title FROM suggramata_foititi,books,users WHERE users.category='Foititis' and users.username='$user' and  suggramata_foititi.username_foititi='$user' and suggramata_foititi.isbn=books.isbn;";*/
 $query="SELECT books.title,suggramata_mathimatwn.Mathima,suggramata_mathimatwn.eksamino FROM books,users,suggramata_foititi,suggramata_mathimatwn WHERE users.category='Foititis' and users.username='$user' and  suggramata_foititi.username_foititi='$user' and suggramata_foititi.isbn=books.isbn and suggramata_mathimatwn.isbn=books.isbn and suggramata_mathimatwn.isbn=suggramata_foititi.isbn and suggramata_mathimatwn.tmima=users.tmima and suggramata_foititi.delivered='1';";
 $result= mysqli_query($db,$query);

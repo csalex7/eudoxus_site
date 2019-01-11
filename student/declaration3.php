@@ -107,6 +107,10 @@ include_once('../partials/header.php');
     </div>
 
 
+    <div class="progress" style="height:20px; width:25%; margin-left:40%; ">
+      <div class="progress-bar" style="width:75%;height:20px"></div>
+    </div>
+
     <div id="outer">
         <div class="inner" id="back">
             <a href="declaration2.php">

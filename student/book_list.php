@@ -1,5 +1,10 @@
 <?php
 include_once '../Config.php';
+session_start();
+if(!isset($_SESSION['login_user'])){
+         echo "not set ";
+         header("location: ../login.php");
+    }
 include_once '../partials/header.php';
 include_once '../partials/footer.html';
 ?>

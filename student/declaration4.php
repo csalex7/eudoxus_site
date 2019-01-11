@@ -31,16 +31,21 @@ include_once('../partials/header.php');
     }
     else {
         if (headers_sent()) {
-            echo "Δεν επιλέξατε κανένα σύγγραμμα";
-            echo $_GET['semester2'];
             ?>
-                <a class="badge badge-light" href="declaration3.php">Πίσω στην Δήλωση</a>
+                <div id = "no_books_selected">
+                    <h5> Δεν επιλέξατε κανένα σύγγραμμα </h5>
+                    <a class="btn btn-success btn-lg" id="back_to_semester" href="declaration2.php">
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                        Πίσω στην Δήλωση
+                    </a>
+                </div>
             <?php
             die();
         }
     }
 
 ?>
+
 
 
 <div class="container">

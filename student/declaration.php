@@ -51,7 +51,9 @@
 
 
 
-
+<div class="progress" style="height:20px; width:25%; margin-left:50%; ">
+  <div class="progress-bar" style="width:25%;height:20px"></div>
+</div>
 
 <?php
 include_once('../partials/footer.html');

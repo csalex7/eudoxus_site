@@ -12,7 +12,6 @@
 }
 
 #back2 {
-    margin-top: 230px;
     margin-left: 250px;
 }
 
@@ -76,4 +75,12 @@ a:hover{
     margin-left: 78%;
     width:100px;
     height: 100px;
+}
+
+#no_books_selected {
+    margin-left: 40%;
+}
+
+#back_to_semester {
+    margin-left: 4%;
 }

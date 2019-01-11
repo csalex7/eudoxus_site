@@ -8,32 +8,32 @@ include_once 'Config.php';
 session_start();
 $user=$_SESSION['login_user'];
 
-$query="SELECT * FROM users WHERE username='$user' and category='Foititis'";
+$query="SELECT * FROM users WHERE username='$user' ";
 $result = mysqli_query($db,$query);
 $row= mysqli_fetch_array($result);
 $result=0;
 if(isset($_POST['newpass'])){
 	$newpass= $_POST['newpass'];
-	$query="UPDATE users SET password='$newpass' WHERE username='$user' and category='Foititis'";
+	$query="UPDATE users SET password='$newpass' WHERE username='$user' ";
 	$result = mysqli_query($db,$query);
 }
 if(isset($_POST['newmail'])){
 	$newmail= $_POST['newmail'];
-	$query="UPDATE users SET email='$newmail' WHERE username='$user' and category='Foititis'";
+	$query="UPDATE users SET email='$newmail' WHERE username='$user' ";
 	$result = mysqli_query($db,$query);
 }
 if(isset($_POST['newphone'])){
 	$newphone= $_POST['newphone'];
-	$query="UPDATE users SET Phone='$newphone' WHERE username='$user' and category='Foititis'";
+	$query="UPDATE users SET Phone='$newphone' WHERE username='$user' ";
 	$result = mysqli_query($db,$query);
 }
 if(isset($_POST['newtmima'])){
 	$newtmima= $_POST['newtmima'];
-	$query="UPDATE users SET tmima='$newtmima' WHERE username='$user' and category='Foititis'";
+	$query="UPDATE users SET tmima='$newtmima' WHERE username='$user'";
 	$result = mysqli_query($db,$query);
 }
 if($result){
-	header("refresh:0; url=student/student.php");
+	header("refresh:0; url=landing.php");
 }
 ?>
 

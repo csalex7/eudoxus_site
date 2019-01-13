@@ -2,6 +2,7 @@
     session_start();
     if(!isset($_SESSION['login_user'])){
          echo "not set ";
+         $_SESSION['prev_loc'] = '/eudoxus_site/student/declaration.php';
          header("location: ../login.php");
     }
     include_once('../partials/header.php');

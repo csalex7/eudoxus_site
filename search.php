@@ -92,3 +92,6 @@ if(isset($_GET["search"])) {
 ?>
 </div>
 
+<?php 
+include_once './partials/footer.html';
+?>

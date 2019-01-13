@@ -21,8 +21,11 @@
 		
       if($count == 1) {
          $_SESSION['login_user'] = $myusername;
-         
-         header("location: landing.php");
+         if (isset($_SESSION['prev_loc'])){
+            header("location: ".$_SESSION['prev_loc']);
+         }else{         
+            header("location: landing.php");
+         }
       }else {
          $error = "Your Login Name or Password is invalid";
       }

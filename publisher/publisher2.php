@@ -1,5 +1,12 @@
 <?php
 include_once '../Config.php';
+session_start();
+
+if(!isset($_SESSION['login_user'])){
+  echo "not set ";
+  $_SESSION['prev_loc'] = '/eudoxus_site/publisher/publisher2.php';
+  header("location: ../login.php");
+}
 include('../partials/header.php');
 ?>
 
@@ -21,7 +28,7 @@ include('../partials/header.php');
 
   <?php
   $username = $_SESSION['login_user'] ;
-  $query="SELECT books.title,books.isbn,books.author,books.category,suggramata_ekdoti.quantinty FROM users,suggramata_ekdoti,books WHERE users.username='$username' and suggramata_ekdoti.isbn=books.isbn and suggramata_ekdoti.username_ekdoti=users.username ;"; /*anti gia ekdotis1 to kanoniko username*/
+  $query="SELECT books.title,books.isbn,books.author,books.category,suggramata_ekdoti.quantinty FROM users,suggramata_ekdoti,books WHERE users.username='$username' and suggramata_ekdoti.isbn=books.isbn and suggramata_ekdoti.username_ekdoti=users.username and users.category='ekdotis' ;"; /*anti gia ekdotis1 to kanoniko username*/
   $result = mysqli_query($db,$query);
   $resultCheck= mysqli_num_rows($result);
 

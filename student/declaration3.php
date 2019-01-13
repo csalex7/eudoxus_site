@@ -41,7 +41,7 @@ include_once('../partials/header.php');
                 while($row= mysqli_fetch_assoc($result)){
                     $i+=1;
                     ?>
-                    <a onclick="<?php echo $function.$i.$end;?>" href="#" class="big" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;<?php echo $row['mathima']; ?> </a>
+                    <a onclick="<?php echo $function.$i.$end;?>" href="#" class="big" data-value="option1" tabIndex="-1"><?php echo $row['mathima']; ?> </a>
                     <div id=<?php echo $idName.$i;?> class="card_divs" style="display: none;" >
                         <?php
                             $mathima = $row['mathima'];
@@ -108,7 +108,7 @@ include_once('../partials/header.php');
 
 
     <div class="progress" style="height:20px; width:25%; margin-left:40%; ">
-      <div class="progress-bar" style="width:75%;height:20px"></div>
+      <div class="progress-bar" style="width:75%;height:20px">75%</div>
     </div>
 
     <div id="outer">
@@ -119,7 +119,7 @@ include_once('../partials/header.php');
         </div>
         <div class="inner">
             <a href="declaration4.php">
-                <button type="submit" value="submit" class="btn btn-lg btn-primary">Υποβολή Δήλωσης</button>
+                <button type="submit" value="submit" class="btn btn-lg btn-success">Υποβολή Δήλωσης</button>
             </a>
         </div>
     </div>

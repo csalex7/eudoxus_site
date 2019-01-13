@@ -55,7 +55,7 @@ include_once('../partials/header.php');
       </h1>
       <hr class="my-4">
       <p class="lead">
-        <a class="btn btn-success btn-lg" href="student.php" role="button"><i class="fas fa-long-arrow-alt-left"></i>  Πίσω στον Φοιτητή</a>
+        <a class="btn btn-secondary btn-lg" href="student.php" role="button"><i class="fas fa-long-arrow-alt-left"></i>  Πίσω στον Φοιτητή</a>
       </p>
     </div>
 </div>

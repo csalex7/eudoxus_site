@@ -35,7 +35,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="../landing.php"> <i class="fas fa-book"></i> ΕΥΔΟΞΟΣ</a>
+    <a class="navbar-brand" href="/eudoxus_site/landing.php"> <i class="fas fa-book"></i> ΕΥΔΟΞΟΣ</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -47,11 +47,11 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/eudoxus_site/student/declaration.php">Δήλωση Συγγραμμάτων</a>
-            <a class="dropdown-item" href="#">Τροποποίηση Δήλωσης</a>
-            <a class="dropdown-item" href="#">Ανταλλαγή Συγγραμμάτων</a>
-            <a class="dropdown-item" href="#">Λίστα Συγγραμμάτων</a>
+            <a class="dropdown-item" href="/eudoxus_site/student/edit_declaration.php">Τροποποίηση Δήλωσης</a>
+            <a class="dropdown-item" href="/eudoxus_site/student/trade_books.php">Ανταλλαγή Συγγραμμάτων</a>
+            <a class="dropdown-item" href="/eudoxus_site/student/book_list.php">Λίστα Συγγραμμάτων</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Αναζήτηση Συγγραμμάτων</a>
+            <a class="dropdown-item" href="/eudoxus_site/search.php">Αναζήτηση Συγγραμμάτων</a>
             <a class="dropdown-item" href="#">Βοήθεια</a>
           </div>
         </li>
@@ -61,10 +61,10 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/eudoxus_site/publisher/publisher2.php">Διαχείρηση Συγγραμμάτων</a>
-            <a class="dropdown-item" href="#">Υπηρεσία Ταχυμεταφοράς</a>
+            <a class="dropdown-item" href="/eudoxus_site/construct.php">Υπηρεσία Ταχυμεταφοράς</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Αναζήτηση Συγγραμμάτων</a>
-            <a class="dropdown-item" href="#">Βοήθεια</a>
+            <a class="dropdown-item" href="/eudoxus_site/search.php">Αναζήτηση Συγγραμμάτων</a>
+            <a class="dropdown-item" href="/eudoxus_site/publisher/publisher_help.php">Βοήθεια</a>
           </div>
         </li>
         <li class="nav-item dropdown">

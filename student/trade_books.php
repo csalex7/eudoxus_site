@@ -26,6 +26,7 @@ include_once '../partials/footer.html';
 $user=$_SESSION['login_user'];
 
  $query="SELECT books.title,books.author,suggramata_mathimatwn.Mathima,suggramata_mathimatwn.eksamino,suggramata_foititi.exchange,suggramata_foititi.isbn FROM books,users,suggramata_foititi,suggramata_mathimatwn WHERE users.category='Foititis' and users.username='$user' and  suggramata_foititi.username_foititi='$user' and suggramata_foititi.isbn=books.isbn and suggramata_mathimatwn.isbn=books.isbn and suggramata_mathimatwn.isbn=suggramata_foititi.isbn and suggramata_mathimatwn.tmima=users.tmima and suggramata_foititi.delivered='1';";$result= mysqli_query($db,$query);
+$resultCheck= mysqli_num_rows($result);
 
 ?>
 <div class="card text-white bg-dark mb-3" style="max-width: 18rem; margin-left:40%;">

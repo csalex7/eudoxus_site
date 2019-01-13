@@ -29,7 +29,7 @@
 
 <?php
 
-$query="SELECT suggramata_mathimatwn.Mathima,books.title,books.author,books.isbn,suggramata_mathimatwn.eksamino FROM books,dhlwseis,suggramata_mathimatwn,users WHERE users.category='Foititis' and users.username='$user' and dhlwseis.foititis='$user' and dhlwseis.isbn=suggramata_mathimatwn.isbn and books.isbn=dhlwseis.isbn;";
+$query="SELECT suggramata_mathimatwn.Mathima,books.title,books.author,books.isbn,suggramata_mathimatwn.eksamino FROM books,dhlwseis,suggramata_mathimatwn,users WHERE users.category='Foititis' and users.username='$user' and dhlwseis.foititis='$user' and dhlwseis.isbn=suggramata_mathimatwn.isbn and books.isbn=dhlwseis.isbn and dhlwseis.mathima=suggramata_mathimatwn.Mathima;";
 $result = mysqli_query($db,$query);
   $resultCheck= mysqli_num_rows($result);
   ?>

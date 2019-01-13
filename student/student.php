@@ -42,7 +42,7 @@ include_once('../partials/header.php');
 
   <div class="row text-center" id="row2">
     <div class="col-lg-6 col-md-6 mb-4 zoom">
-      <a href="/publisher" >
+      <a href="/eudoxus_site/student/trade_books.php" >
         <div class="card">
           <img src="https://5.imimg.com/data5/YR/GU/GLADMIN-16290278/exchange-or-tradeoff-500x500.jpg" alt="">
           <div class="card-body">

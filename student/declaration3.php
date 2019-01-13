@@ -108,7 +108,7 @@ include_once('../partials/header.php');
 
 
     <div class="progress" style="height:20px; width:25%; margin-left:40%; ">
-      <div class="progress-bar" style="width:75%;height:20px"></div>
+      <div class="progress-bar" style="width:75%;height:20px">75%</div>
     </div>
 
     <div id="outer">

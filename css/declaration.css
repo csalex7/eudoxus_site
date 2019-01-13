@@ -89,3 +89,8 @@ a:hover{
 #change_book {
     background-color: #f44b42;
 }
+
+div.card.text-white.bg-dark.mb-3 {
+    max-width: 30rem!important;
+    margin-left: 33%;
+}

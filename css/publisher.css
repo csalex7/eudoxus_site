@@ -27,10 +27,11 @@ img {
 }
 
 .previous2 {
-  background-color: red;
+  background-color: grey;
+  border-radius: 7%;
   border: none;
   color: white;
-  padding: 10px 25px;
+  padding: 8px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -44,10 +45,11 @@ img {
 }
 
 .publisher_add {
-  background-color: #4CAF50;
+  background-color:blue;
   border: none;
   color: white;
-  padding: 15px 32px;
+  border-radius: 5%;
+  padding: 10px 22px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -124,7 +126,7 @@ input[type=submit] {
 #hidden_info {
   font-size: 15px;
   border-style: ridge;
-  border-color: green;
+  border-color: rgb(15, 50, 145);
   border-width: 3px;  
 }
 
@@ -145,7 +147,7 @@ input[type=submit] {
   position: center;
   text-align: center;
   border-style: solid;
-  border-color: green;
+  border-color: rgb(15, 50, 145);
   font-size: 20px; 
   width: 100%;
 

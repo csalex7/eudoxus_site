@@ -24,7 +24,7 @@
 
 
       
-      $sql = "INSERT INTO users(username,email, passwrd, nameR, Surname, Phone, category,tmima) VALUES ('$myusername','$email', '$mypassword', '$name','$surname', '$phone','$category','$tmima');";
+      $sql = "INSERT INTO users(username,email, password, Name, Surname, Phone, category,tmima) VALUES ('$myusername','$email', '$mypassword', '$name','$surname', '$phone','$category','$tmima');";
       //$sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
       
       $result = mysqli_query($db,$sql);  
@@ -37,10 +37,10 @@
       {
       echo "Error";
 
-      }/*
+      }
       $_SESSION['login_user'] = $myusername;
       header("location: index.php");
-   }*/
-}
+   }
+
 
 ?>

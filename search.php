@@ -70,18 +70,20 @@ body{
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
-    <li class="breadcrumb-item active" aria-current="page">Αρχική/Αναζήτηση</li>
+    <li class="breadcrumb-item active" aria-current="page"><a style="color:grey;" href="/eudoxus_site/landing.php">Αρχική</a>/Αναζήτηση</li>
   </ol>
 </nav>
 
 
 <div class="wrap container">
    <div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+   <form action="">
+      <input name="search" type="text" class="searchTerm" placeholder="Αναζήτηση...">
       <button type="submit" class="searchButton"> <i class="fa fa-search"></i> </button>
         <input type="radio" name="searchi" value="books" checked="checked"> Συγγράματα
         <input type="radio" name="searchi" value="bookstores"> Σημεία Διανομής
         <input type="radio" name="searchi" value="users"> Εκδότες
+    </form>
    </div>
 </div>
 
@@ -99,13 +101,16 @@ if(isset($_GET["search"])) {
             echo "Not found";
         }else{
             $resultCheck= mysqli_num_rows($result);
-            echo "<p class='wrap container' style='align:center;color:#bfbfbf;'>".$resultCheck." result(s) fetched:</p>";
-            echo "<div class='container' id='rcorners' style='width:19%;clear: both;'> ";
+            echo "<p class='wrap container' style='align:center;color:#bfbfbf;'>".$resultCheck." Αποτελέσματα:</p>";
             if ($resultCheck > 0) {
+                echo "<div class='container' id='rcorners' style='width:19%;clear: both;'> ";
                 while($row= mysqli_fetch_assoc($result)){
-                    echo '<b><p style="color :#595959;">';
-                    echo $row["title"];  
-                    echo ' </p></b>';          
+                    echo '<p style="color :#595959;">';
+                    echo "<b>Τίτλος:</b> ".$row["title"]." <br>";  
+                    echo "<b>Συγγραφέας: </b>".$row["author"]." <br>";
+                    echo "<b>Κατηγορία: </b>".$row["category"]." <br>";
+                    echo "<b>ISBN: </b>".$row["isbn"]." <br>";
+                    echo ' </p>';          
                 }
             }
             echo "</div> <br>";
@@ -117,30 +122,37 @@ if(isset($_GET["search"])) {
             echo "Not found";
         }else{
             $resultCheck= mysqli_num_rows($result);
-            echo $resultCheck." results fetched";
+            echo "<p class='wrap container' style='align:center;color:#bfbfbf;'>".$resultCheck." Αποτελέσματα:</p>";
             if ($resultCheck > 0) {
+                echo "<div class='container' id='rcorners' style='width:19%;clear: both;'> ";
                 while($row= mysqli_fetch_assoc($result)){
-                    echo '<p class="book_container">';
-                    echo $row["name"];  
-                    echo '<br> </p>';          
+                    echo '<p style="color :#595959;">';
+                    echo "<b>Όνομα:</b> ".$row["Name"]." <br>";      
+                    echo "<b>Επίθετο:</b> ".$row["Surname"]." <br>";
+                    echo "<b>Username:</b> ".$row["username"]." <br>";
+                    echo "<b>Τηλέφωνο:</b> ".$row["phone"]." <br>";
+                    echo ' </p>';  
                 }
             }
         }
 
     } elseif($tbl == "users"){
-        $query = "SELECT * FROM users WHERE name='$str' and category='ekdotis';";
+        $query = "SELECT * FROM users WHERE Name='$str' and category='ekdotis';";
         $result=mysqli_query($db,$query);
         if(!$result) {
             echo "Not found";
         }else{
             $resultCheck= mysqli_num_rows($result);
-            echo  '<div class="container">';
-            echo $resultCheck." results fetched";
+            echo "<p class='wrap container' style='align:center;color:#bfbfbf;'>".$resultCheck." Αποτελέσματα:</p>";
             if ($resultCheck > 0) {
                 while($row= mysqli_fetch_assoc($result)){
-                    echo '<div id="rcorners">';
-                    echo $row["name"];  
-                    echo '<br> </div>';          
+                    echo "<div class='container' id='rcorners' style='width:19%;clear: both;'> ";
+                    echo '<p style="color :#595959;">';
+                    echo "<b>Όνομα:</b> ".$row["Name"]." <br>";      
+                    echo "<b>Επίθετο:</b> ".$row["Surname"]." <br>";
+                    echo "<b>Username:</b> ".$row["username"]." <br>";
+                    echo "<b>Τηλέφωνο:</b> ".$row["Phone"]." <br>";
+                    echo ' </p></div><br>';       
                 }
             }
             echo "</div>";

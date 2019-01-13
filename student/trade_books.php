@@ -29,10 +29,10 @@ $user=$_SESSION['login_user'];
 $resultCheck= mysqli_num_rows($result);
 
 ?>
-<div class="card text-white bg-dark mb-3" style="max-width: 18rem; margin-left:40%;">
-  <div class="card-header">Συγγράμματα για Ανταλλαγή</div>
-    <div class="card-body">
-        <div class="vscrolling_container">
+<div class="card text-white bg-dark mb-3" style="max-width: 60%;height:100%; margin-left:40%;">
+  <div class="card-header" style='height:100%;'>Συγγράμματα για Ανταλλαγή</div>
+    <div class="card-body" >
+        <div class="vscrolling_container" style='height:1000px;'>
             <div class="row">
                 <div class="col-lg-12">
 <?php

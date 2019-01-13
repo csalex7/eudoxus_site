@@ -91,6 +91,8 @@ a:hover{
 }
 
 div.card.text-white.bg-dark.mb-3 {
-    max-width: 30rem!important;
-    margin-left: 33%;
+    max-width: 50%!important;
+    margin-left: 28%!important;
+    margin-top: 2%!important;
+    position: relative;
 }

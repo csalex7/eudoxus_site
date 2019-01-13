@@ -7,7 +7,18 @@ if(!isset($_SESSION['login_user'])){
   $_SESSION['prev_loc'] = '/eudoxus_site/publisher/publisher2.php';
   header("location: ../login.php");
 }
+
+
+$username = $_SESSION['login_user'] ;
+$query = "SELECT * FROM users WHERE users.username='$username' and category='ekdotis';";
+$result = mysqli_query($db,$query);
+$resultCheck= mysqli_num_rows($result);
+if ($resultCheck <= 0) {
+  echo "Πρόσβαση μόνο σε εκδότες";
+  header("location: ./error_page.php");
+}
 include('../partials/header.php');
+
 ?>
 
 <link href="../css/publisher.css" rel="stylesheet">

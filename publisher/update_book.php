@@ -3,6 +3,7 @@ include_once '../Config.php';
 ?>
 <link href="../css/publisher.css" rel="stylesheet">
 <link href="../css/app.css" rel="stylesheet">
+<link href="../css/form.css" rel="stylesheet">
 
 <?php
 session_start();
@@ -50,16 +51,25 @@ if($result){
 }
 
 ?>
-<div class="container_form" >
-<form action="update_book.php" class="container_form" method="POST">
+<div id="id01" class="modal" >
+<form action="update_book.php" class="modal-content" method="POST" style="width : 45%;">
+<div class="container">
+	<h1>Τροποποίηση Συγγράμματος</h1>
+    <hr>
 Τίτλος: <input type="text" name="newtitle" value="<?php echo $row[0]; ?>"></br>
 ISBN: <input type="text" name="newisbn" value="<?php echo $row[1]; ?>"></br>
 Συγγραφέας: <input type="text" name="newauthor" value="<?php echo $row[2]; ?>"></br>
 Κατηγορία: <input type="text" name="newcategory" value="<?php echo $row[3]; ?>"></br>
 Διαθέσιμα αντίτυπα: <input type="text" name="newquantinty" value="<?php echo $row[4]; ?>"></br>
 <input type="hidden" name="isbn" value="<?php echo htmlspecialchars($_GET["isbn"]); ?>">
+<div class="clearfix">
+        <button type="submit" class="signupbtn">Τροποποίηση</button>
+        <a href="./publisher2.php">
+        <button type="button"  class="cancelbtn">Ακύρωση</button>
+        </a>
+<!--<input type="submit" name="add" value="Προσθήκη"> -->
+</form>
+</div>
 
-
-<input type="submit" value="Τροποποίηση">
 </form>
 </div>

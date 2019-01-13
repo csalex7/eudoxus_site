@@ -9,8 +9,8 @@ include_once('../partials/header.php');
     <li class="breadcrumb-item"><a href="/eudoxus_site/landing.php">Αρχική</a></li>
     <li class="breadcrumb-item active" aria-current="page">Φοιτητής</li>
         <li class="options">
-          <p id="option1"><a class="badge badge-light" href="/signin">ΒΟΗΘΕΙΑ</a></p>
-          <p id="option12"><a class="badge badge-light" href="/signin">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>      
+          <p id="option1"><a class="badge badge-light" href="/">ΒΟΗΘΕΙΑ</a></p>
+          <p id="option12"><a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>      
         </li>
   </ol>
 </nav>

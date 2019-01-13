@@ -34,7 +34,7 @@ include_once('../partials/header.php');
             ?>
                 <div id = "no_books_selected">
                     <h5> Δεν επιλέξατε κανένα σύγγραμμα </h5>
-                    <a class="btn btn-success btn-lg" id="back_to_semester" href="declaration2.php">
+                    <a class="btn btn-secondary btn-lg" id="back_to_semester" href="declaration2.php">
                         <i class="fas fa-long-arrow-alt-left"></i>
                         Πίσω στην Δήλωση
                     </a>
@@ -55,7 +55,7 @@ include_once('../partials/header.php');
       </h1>
       <hr class="my-4">
       <p class="lead">
-        <a class="btn btn-success btn-lg" href="student.php" role="button"><i class="fas fa-long-arrow-alt-left"></i>  Πίσω στον Φοιτητή</a>
+        <a class="btn btn-secondary btn-lg" href="student.php" role="button"><i class="fas fa-long-arrow-alt-left"></i>  Πίσω στον Φοιτητή</a>
       </p>
     </div>
 </div>

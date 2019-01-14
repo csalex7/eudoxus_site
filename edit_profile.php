@@ -33,7 +33,7 @@ if(isset($_POST['newtmima'])){
 	$result = mysqli_query($db,$query);
 }
 if($result){
-	header("refresh:0; url=landing.php");
+	header("refresh:0; url=index.php");
 }
 ?>
 

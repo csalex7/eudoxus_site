@@ -42,7 +42,7 @@ include('../partials/header.php');
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
-    <li class="breadcrumb-item"><a href="/eudoxus_site/landing.php">Αρχική</a></li>
+    <li class="breadcrumb-item"><a href="/eudoxus_site/index.php">Αρχική</a></li>
     <li class="breadcrumb-item"><a href="publisher.php">Εκδότης</a></li>
     <li class="breadcrumb-item active" aria-current="page">Διαχείρηση Συγγραμμάτων</li>
   </ol>

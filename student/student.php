@@ -6,7 +6,7 @@ include_once('../partials/header.php');
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
-    <li class="breadcrumb-item"><a href="/eudoxus_site/landing.php">Αρχική</a></li>
+    <li class="breadcrumb-item"><a href="/eudoxus_site/index.php">Αρχική</a></li>
     <li class="breadcrumb-item active" aria-current="page">Φοιτητής</li>
     <br><br>        
   </ol>

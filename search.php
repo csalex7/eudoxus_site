@@ -70,7 +70,7 @@ body{
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
-    <li class="breadcrumb-item active" aria-current="page"><a style="color:grey;" href="/eudoxus_site/landing.php">Αρχική</a>/Αναζήτηση</li>
+    <li class="breadcrumb-item active" aria-current="page"><a style="color:grey;" href="/eudoxus_site/index.php">Αρχική</a>/Αναζήτηση</li>
   </ol>
 </nav>
 

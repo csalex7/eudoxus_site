@@ -27,7 +27,7 @@ if ($resultCheck <= 0) {
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb container">
-    <li class="breadcrumb-item"><a href="../landing.php">Αρχική</a></li>
+    <li class="breadcrumb-item"><a href="../index.php">Αρχική</a></li>
     <li class="breadcrumb-item"><a href="../student/student.php">Φοιτητής</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ανταλλαγή Συγγραμμάτων</li>
   </ol>

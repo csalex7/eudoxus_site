@@ -24,7 +24,7 @@
          if (isset($_SESSION['prev_loc'])){
             header("location: ".$_SESSION['prev_loc']);
          }else{         
-            header("location: landing.php");
+            header("location: index.php");
          }
       }else {
          $error = "Το όνομα χρήστη ή ο κωδικός δεν είναι σωστά.";

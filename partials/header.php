@@ -37,7 +37,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"style="width:auto;" >
   <div class="container" >
-    <a class="navbar-brand" href="/eudoxus_site/landing.php"> <i class="fas fa-book"></i> ΕΥΔΟΞΟΣ</a>
+    <a class="navbar-brand" href="/eudoxus_site/index.php"> <i class="fas fa-book"></i> ΕΥΔΟΞΟΣ</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -108,11 +108,22 @@
       
     </div>
   </div>
-  <div class="options">
-          <a class="badge badge-light" href="/eudoxus_site/general_help.php">ΒΟΗΘΕΙΑ</a>
-           <a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a>
-             
-  </div>
+ <div class="options">
+      <ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link badge dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ΒΟΗΘΕΙΑ
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/eudoxus_site/student/student_help.php">Βοήθεια για φοιτητές</a>
+              <a class="dropdown-item" href="/eudoxus_site/student/publisher_help.php">Βοήθεια για εκδότες</a>
+            </div>
+        </li>
+        <li>
+               <a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a>
+        </li>
+    </ul>
+</div>
 
 </nav>
 

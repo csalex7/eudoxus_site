@@ -26,7 +26,7 @@ include_once('../partials/header.php');
         foreach ($name as $vivlio){
             $data   = preg_split('/\s+/', $vivlio);
             $isbn = $data[0];
-            $mathima = substr($vivlio, 1, 100);
+            $mathima = substr($vivlio, 2, 100);
             $query="INSERT INTO dhlwseis(foititis,isbn,mathima) VALUES ('$student','$isbn','$mathima');";
             mysqli_query($db,$query);
         }

@@ -53,7 +53,7 @@
             <a class="dropdown-item" href="/eudoxus_site/student/trade_books.php">Ανταλλαγή Συγγραμμάτων</a>
             <a class="dropdown-item" href="/eudoxus_site/student/book_list.php">Λίστα Συγγραμμάτων</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/eudoxus_site/search.php">Αναζήτηση Συγγραμμάτων</a>
+            <a class="dropdown-item" href="/eudoxus_site/search.php">Αναζήτηση </a>
             <a class="dropdown-item" href="#">Βοήθεια</a>
           </div>
         </li>
@@ -65,7 +65,7 @@
             <a class="dropdown-item" href="/eudoxus_site/publisher/publisher2.php">Διαχείρηση Συγγραμμάτων</a>
             <a class="dropdown-item" href="/eudoxus_site/construct.php">Υπηρεσία Ταχυμεταφοράς</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/eudoxus_site/search.php">Αναζήτηση Συγγραμμάτων</a>
+            <a class="dropdown-item" href="/eudoxus_site/search.php">Αναζήτηση </a>
             <a class="dropdown-item" href="/eudoxus_site/publisher/publisher_help.php">Βοήθεια</a>
           </div>
         </li>
@@ -110,7 +110,7 @@
   </div>
   <div class="options">
           <a class="badge badge-light" href="/">ΒΟΗΘΕΙΑ</a>
-           <a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a>
+           <a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ</a>
              
   </div>
 

@@ -167,7 +167,15 @@ hr {
 Email: <input type="text" name="newmail" value="<?php echo $row[4]; ?>"></br>
 Τηλέφωνο: <input type="text" name="newphone" value="<?php echo $row[5]; ?>"></br>
 Κατηγορία: <input type="text" disabled name="category" value="<?php echo $row[6]; ?>"></br>
-Τμήμα: <input type="text" name="newtmima" value="<?php echo $row[7]; ?>"></br>
+<?php 
+$username = $_SESSION['login_user'] ;
+$query = "SELECT * FROM users WHERE users.username='$username' and category='ekdotis';";
+$result = mysqli_query($db,$query);
+$resultCheck= mysqli_num_rows($result);
+if ($resultCheck <= 0) {
+  echo 'Τμήμα: <input type="text" name="newtmima" value="'.$row[7].'"></br>';
+}
+?>
 
 <div class="clearfix">
         <button type="submit" class="signupbtn">Αποθήκευση</button>

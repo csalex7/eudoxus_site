@@ -19,7 +19,7 @@
       echo "Πρόσβαση μόνο σε φοιτητές";
       header("location: ./error_page2.php");
     }
-    include('../partials/header.php');
+    
 
 ?>
 

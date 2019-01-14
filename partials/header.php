@@ -109,7 +109,7 @@
     </div>
   </div>
   <div class="options">
-          <a class="badge badge-light" href="/">ΒΟΗΘΕΙΑ</a>
+          <a class="badge badge-light" href="/eudoxus_site/general_help.php">ΒΟΗΘΕΙΑ</a>
            <a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a>
              
   </div>

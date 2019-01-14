@@ -116,7 +116,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="/eudoxus_site/student/student_help.php">Βοήθεια για φοιτητές</a>
-              <a class="dropdown-item" href="/eudoxus_site/student/publisher_help.php">Βοήθεια για εκδότες</a>
+              <a class="dropdown-item" href="/eudoxus_site/publisher/publisher_help.php">Βοήθεια για εκδότες</a>
             </div>
         </li>
         <li>

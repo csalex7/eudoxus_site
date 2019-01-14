@@ -54,7 +54,7 @@
             <a class="dropdown-item" href="/eudoxus_site/student/book_list.php">Λίστα Συγγραμμάτων</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/eudoxus_site/search.php">Αναζήτηση Συγγραμμάτων</a>
-            <a class="dropdown-item" href="#">Βοήθεια</a>
+            <a class="dropdown-item" href="/eudoxus_site/student/student_help.php">Βοήθεια</a>
           </div>
         </li>
         <li class="nav-item dropdown">

@@ -92,3 +92,26 @@
 <?php
    include('partials/footer.html');
 ?>
+<!--
+<link href="./css/menu.css"rel="stylesheet">
+
+
+<nav class='menu'>
+    <input checked='checked' class='menu-toggler' id='menu-toggler' type='checkbox'>
+    <label for='menu-toggler'></label>
+    <ul>
+      <li class='menu-item'>
+        <a> <i style="margin-top:25%;" class="fas fa-graduation-cap"></i> </a>
+      </li>
+      <li class='menu-item'>
+        <a> <i class="fas fa-male" style="margin-top:25%;"></i></a>
+      </li>
+      <li class='menu-item'>
+        <a><i class="fas fa-university" style="margin-top:25%;"></i></a>
+      </li>
+      <li class='menu-item'>
+        <a><i class="fas fa-book" style="margin-top:25%;"></i></a>
+      </li>
+    </ul>
+  </nav>
+-->

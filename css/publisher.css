@@ -63,7 +63,7 @@ img {
 
 .publisher_add:hover {
   transition: 0.5s;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 .publisher_add:hover i {
   transition: 0.5s;

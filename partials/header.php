@@ -35,8 +35,8 @@
 
   <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"style="width:auto;" >
+  <div class="container" >
     <a class="navbar-brand" href="/eudoxus_site/landing.php"> <i class="fas fa-book"></i> ΕΥΔΟΞΟΣ</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -101,29 +101,35 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </li>
-             <?php if(isset($_SESSION['login_user'])){  ?>
-                    <li class="signUpIn" ><a  class="badge badge-light" href="/eudoxus_site/logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-sign-out-alt"></i></a></li>
-            <?php }
-             else {   ?>
-                    <li class="signUpIn"><a class="badge badge-light" href="/eudoxus_site/login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>
-                    <li class="signUpIn" ><a  class="badge badge-light" href="/eudoxus_site/signup.php">ΕΓΓΡΑΦΗ<i class="fas fa-user-plus"></i></a></li>
-            <?php } ?>
-      </ul>
+
+          
+        
+      </ul> 
+      
     </div>
+  </div>
+  <div class="options">
+          <a class="badge badge-light" href="/">ΒΟΗΘΕΙΑ</a>
+           <a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a>
+             
   </div>
 
 </nav>
 
 <?php if(isset($_SESSION['login_user'])){ ?>
       <div id="profile">
-        Συνδεδεμένος ως <?php echo $_SESSION['login_user']; ?>
+        <span style="font-size:12px;margin-left:40%;">Συνδεδεμένος ως</span> <b style=font-size:18px;><?php echo $_SESSION['login_user']; ?></b>
           <a href="/eudoxus_site/edit_profile.php" style='color:black;' >
-          <i class="fa fa-user-circle-o"></i>
-          </a><br>
-          <p class="options">
-          <a class="badge badge-light" href="/">ΒΟΗΘΕΙΑ</a>
-           <a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a>
-        </p>
+            <i class="fa fa-user-circle-o hv" style="font-size:24px;"></i>
+          </a>
+          <a href="/eudoxus_site/logout.php" style='color:black;font-size:24px;'> 
+            <i class="fas fa-sign-out-alt hv"></i>
+          </a>
+            <?php }
+             else {   ?>
+                    <span style="margin-left:90%;" class="signUpIn"><a class="badge badge-light" href="/eudoxus_site/login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a>
+                    <a  class="badge badge-light" href="/eudoxus_site/signup.php">ΕΓΓΡΑΦΗ<i class="fas fa-user-plus" ></i></a></span>
+            <?php } ?> <br>
+          
       </div>
-<?php } ?>
+<?php  ?>

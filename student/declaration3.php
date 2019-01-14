@@ -113,9 +113,7 @@ include_once('../partials/header.php');
 
     <div id="outer">
         <div class="inner" id="back">
-            <a href="declaration2.php">
-                <button  type="button" class="btn btn-secondary btn-md">&#8678;Πίσω</button>
-            </a>
+            <a href="declaration2.php" class="previous2"><i style="font-size:36px" class="fas fa-angle-left"></i></a>
         </div>
         <div class="inner">
             <a href="declaration4.php">

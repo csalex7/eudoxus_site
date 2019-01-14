@@ -30,16 +30,19 @@
       $result = mysqli_query($db,$sql);  
       if($result)
       {
-      echo "Success";
+         echo "Success";
+         $_SESSION['login_user'] = $myusername;
+         header("location: index.php");
 
       }
       else
       {
-      echo "Error";
+         echo "Error";
+         $_SESSION["errorL"] = "To όνομα χρήστη δεν είναι έγκυρο.";
+         header("location: signup.php");
 
       }
-      $_SESSION['login_user'] = $myusername;
-      header("location: index.php");
+      
    }
 
 

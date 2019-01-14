@@ -31,7 +31,7 @@ include('../partials/header.php');
   }
   #rcorners {
         border-radius: 15px 50px;
-        background: #e6e6e6;
+        background: #a3b1ce;
         padding: 20px; 
         width: 200px;
         height: 150px; 

@@ -124,6 +124,12 @@ hr {
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email" required>
 
+      <?php 
+      session_start();
+        if(isset($_SESSION["errorL"])) {
+          echo "<span style='color:red;'>".$_SESSION["error"]."</span><br>";
+        }?>
+
       <label for="username"><b>Username</b></label>
       <input type="text" placeholder="Enter username" name="username" required>
 

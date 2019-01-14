@@ -27,7 +27,7 @@
             header("location: landing.php");
          }
       }else {
-         $error = "Your Login Name or Password is invalid";
+         $error = "Το όνομα χρήστη ή ο κωδικός δεν είναι σωστά.";
       }
    }
 ?>
@@ -91,6 +91,11 @@ hr {
 					</div>
 
 					<div class="container">
+               <?php 
+                  if (isset($error)) {
+                     echo "<span style='color:red;'>".$error."</span><br>";
+                  } 
+                  ?>
 						<label for="uname"><b>Username</b></label>
 						<input type="text" placeholder="Enter Username" name="username" required>
 
@@ -103,8 +108,7 @@ hr {
 					</div>
 
 					<div class="container" style="background-color:#f1f1f1;margin:14px 10 2px 10;">
-						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-						<span class="psw">Forgot <a href="#">password?</a></span>
+						<a href="index.php"> <button type="button" class="cancelbtn">Cancel</button> </a>
 					</div>
 				</form>		
 			

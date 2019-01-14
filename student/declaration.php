@@ -1,4 +1,6 @@
 <?php
+    ob_start();
+    include_once '../Config.php';
     session_start();
     if(!isset($_SESSION['login_user'])){
          echo "not set ";
@@ -6,6 +8,19 @@
          header("location: ../login.php");
     }
     include_once('../partials/header.php');
+
+
+
+    $username = $_SESSION['login_user'] ;
+    $query = "SELECT * FROM users WHERE users.username='$username' and category='Foititis';";
+    $result = mysqli_query($db,$query);
+    $resultCheck= mysqli_num_rows($result);
+    if ($resultCheck <= 0) {
+      echo "Πρόσβαση μόνο σε φοιτητές";
+      header("location: ./error_page2.php");
+    }
+    
+
 ?>
 
 <link href="../css/student.css" rel="stylesheet">

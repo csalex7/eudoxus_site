@@ -21,13 +21,18 @@ include_once('../partials/header.php');
 
 
 <?php
-    if(!empty($_GET['isbn'])) {
-        $name = $_GET['isbn'];
+
+    if(!empty($_GET['vivlio'])) {
+        $name = $_GET['vivlio'];
         $student = $_SESSION['login_user'];
-        foreach ($name as $isbn){
-            $query="INSERT INTO dhlwseis(foititis,isbn) VALUES ('$student','$isbn');";
+        foreach ($name as $vivlio){
+            $data   = preg_split('/\s+/', $vivlio);
+            $isbn = $data[0];
+            $mathima = substr($vivlio, 1, 100);
+            $query="INSERT INTO dhlwseis(foititis,isbn,mathima) VALUES ('$student','$isbn','$mathima');";
             mysqli_query($db,$query);
         }
+
     }
     else {
         if (headers_sent()) {

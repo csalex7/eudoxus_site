@@ -12,7 +12,7 @@
       $surname = mysqli_real_escape_string($db,$_POST['surname']);
       $phone = mysqli_real_escape_string($db,$_POST['phone']);
       $category = mysqli_real_escape_string($db,$_POST['category']);
-      $tmima = "DI";// mysqli_real_escape_string($db,$_POST['tmima']);
+      $tmima = mysqli_real_escape_string($db,$_POST['tmima']);
 
       echo $myusername;// = mysqli_real_escape_string($db,$_POST['username']);
       echo $email;// = mysqli_real_escape_string($db,$_POST['email']);

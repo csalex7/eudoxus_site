@@ -118,11 +118,11 @@ hr {
 <div id="id01" class="modal">
   <form class="modal-content" method="POST" action="./sup.php" style="width : 45%;">
     <div class="container">
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
+      <h1>Εγγραφή</h1>
+      <p>Παρακαλώ εισάγετε τα παρακάτω στοιχεία.</p>
       <hr>
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+      <input type="text" placeholder="Εισάγετε Email" name="email" required>
 
       <?php 
       session_start();
@@ -130,39 +130,45 @@ hr {
           echo "<span style='color:red;'>".$_SESSION["error"]."</span><br>";
         }?>
 
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter username" name="username" required>
+      <label for="username"><b>Όνομα Χρήστη</b></label>
+      <input type="text" placeholder="Εισάγετε username" name="username" required>
 
-      <label for="name"><b>Name</b></label>
-      <input type="text" placeholder="Enter your name" name="name" required>
+      <label for="name"><b>Όνομα</b></label>
+      <input type="text" placeholder="Εισάγετε" name="name" required>
 
-      <label for="surname"><b>Surname</b></label>
-      <input type="text" placeholder="Enter your surname" name="surname" required>
+      <label for="surname"><b>Επίθετο</b></label>
+      <input type="text" placeholder="Εισάγετε επίθετο" name="surname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw"><b>Κωδικός</b></label>
+      <input type="password" placeholder="Εισάγετε Password" name="psw" required>
 
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <label for="psw-repeat"><b>Επανάληψη Κωδικού</b></label>
+      <input type="password" placeholder="Εισάγετε Password" name="psw-repeat" required>
 
-      <label for="phone"><b>Phone</b></label>
-      <input type="text" placeholder="Enter your phone Number" name="phone">
+      <label for="phone"><b>Τηλέφωνο</b></label>
+      <input type="text" placeholder="Εισάγετε το τηλέφωνο" name="phone">
 
+      <script src="../student/student.js"></script>
       
-      <label for="category"> <b> Sign up as:</b> <br></label>
-        <input type="radio" name="category" value="foititis" required> Student<br>
-        <input type="radio" name="category" value="ekdotis" required> Publisher<br>
-        <input type="radio" name="category" value="grammateia" required> Secretary<br><br>
-  Να προσθέσουμε τμήματα
+      <label for="category"> <b> Εγγραφή ως:</b> <br></label>
+        <input type="radio" name="category" value="foititis" id="student" required> Φοιτητής<br>
+        <input type="radio" name="category" value="ekdotis" required> Εκδότης<br>
+        <input type="radio" name="category" value="grammateia" required> Γραμματεία<br><br>
+
+        <label for="tmima"><b>Τμήμα</b></label>
+    <input type="text" placeholder="Εισάγεται τμήμα" name="tmima">
+
+        
+
         <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Απομνημόνευση Κωδικού
         </label>
       <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" class="signupbtn">Εγγραφή</button>
         <a href="index.php">
-        <button type="button"  class="cancelbtn">Cancel</button>
+        <button type="button"  class="cancelbtn">Ακύρωση</button>
         </a>
         
       </div>

@@ -1,5 +1,5 @@
 body {
-  background-color:  #C8D8DE;
+  background-color:  #e5e5e5;
   padding-top: 80px;
 }
 
@@ -103,6 +103,7 @@ footer {
 }
 
 .jumbotron {
+    background-color: #dbcbcb;
     margin-bottom: 100px;
     margin-top: 80px;
     margin-left: 10%;

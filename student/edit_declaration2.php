@@ -24,6 +24,7 @@ $old_isbn=$_GET['old_isbn'];
 $result=0;
 if(isset($_GET['mathima'])){
 	$mathima=$_GET['mathima'];
+  $_SESSION['mathima_dhlwsis']=$mathima;
 	$query="SELECT books.title,books.author,books.isbn FROM suggramata_mathimatwn,books WHERE suggramata_mathimatwn.Mathima='$mathima' and books.isbn=suggramata_mathimatwn.isbn;";
 	$result = mysqli_query($db,$query);
       while($row= mysqli_fetch_assoc($result)){

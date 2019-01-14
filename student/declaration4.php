@@ -12,29 +12,32 @@ include_once('../partials/header.php');
     <li class="breadcrumb-item"><a href="/eudoxus_site/landing.php">Αρχική</a></li>
     <li class="breadcrumb-item" aria-current="page"><a href="/eudoxus_site/student/student.php">Φοιτητής</a></li>
     <li class="breadcrumb-item active" aria-current="page">Δήλωση Συγγραμμάτων</li>
-        <li class="options">
-          <p id="option1"><a class="badge badge-light" href="#">ΒΟΗΘΕΙΑ</a></p>
-          <p id="option12"><a class="badge badge-light" href="#">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>
-        </li>
+        
   </ol>
 </nav>
+<br>
 
 
 <?php
-    if(!empty($_GET['isbn'])) {
-        $name = $_GET['isbn'];
+
+    if(!empty($_GET['vivlio'])) {
+        $name = $_GET['vivlio'];
         $student = $_SESSION['login_user'];
-        foreach ($name as $isbn){
-            $query="INSERT INTO dhlwseis(foititis,isbn) VALUES ('$student','$isbn');";
+        foreach ($name as $vivlio){
+            $data   = preg_split('/\s+/', $vivlio);
+            $isbn = $data[0];
+            $mathima = substr($vivlio, 1, 100);
+            $query="INSERT INTO dhlwseis(foititis,isbn,mathima) VALUES ('$student','$isbn','$mathima');";
             mysqli_query($db,$query);
         }
+
     }
     else {
         if (headers_sent()) {
             ?>
                 <div id = "no_books_selected">
                     <h5> Δεν επιλέξατε κανένα σύγγραμμα </h5>
-                    <a class="btn btn-secondary btn-lg" id="back_to_semester" href="declaration2.php">
+                    <a class="container btn btn-secondary btn-lg" id="back_to_semester" style="float:center;" href="declaration2.php">
                         <i class="fas fa-long-arrow-alt-left"></i>
                         Πίσω στην Δήλωση
                     </a>

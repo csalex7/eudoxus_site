@@ -59,7 +59,9 @@ include_once('../partials/header.php');
                                             $book = $row3['title'];
                                             ?>
                                             <div class="card_divs">
-                                                <a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox" name="isbn[]" value="<?php echo $isbn;?>" />&nbsp;<?php echo $book; ?>
+                                                <a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox" name="vivlio[]" value="<?php echo $isbn; echo ' '; echo $mathima;?>" />&nbsp;<?php echo $book; ?>
+
+                                                    <!--<input type='hidden' name=mathimata[] value='<?php echo "$mathima";?>'/> -->
                                                     <?php
                                                         $query4="SELECT books.bookstore FROM books WHERE books.isbn ='$isbn';";
                                                         $result4 = mysqli_query($db,$query4);
@@ -113,9 +115,7 @@ include_once('../partials/header.php');
 
     <div id="outer">
         <div class="inner" id="back">
-            <a href="declaration2.php">
-                <button  type="button" class="btn btn-secondary btn-md">&#8678;Πίσω</button>
-            </a>
+            <a href="declaration2.php" class="previous2"><i style="font-size:36px" class="fas fa-angle-left"></i></a>
         </div>
         <div class="inner">
             <a href="declaration4.php">

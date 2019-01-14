@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     include_once('../Config.php');
     session_start();
     if(!isset($_SESSION['login_user'])){
@@ -8,6 +9,17 @@
     }
     include_once('../partials/header.php');
     $user=$_SESSION['login_user'];
+
+    
+    $username = $_SESSION['login_user'] ;
+    $query = "SELECT * FROM users WHERE users.username='$username' and category='Foititis';";
+    $result = mysqli_query($db,$query);
+    $resultCheck= mysqli_num_rows($result);
+    if ($resultCheck <= 0) {
+      echo "Πρόσβαση μόνο σε φοιτητές";
+      header("location: ./error_page2.php");
+    }
+
 ?>
 
 <link href="../css/student.css" rel="stylesheet">
@@ -20,10 +32,6 @@
     <li class="breadcrumb-item"><a href="/eudoxus_site/landing.php">Αρχική</a></li>
     <li class="breadcrumb-item" aria-current="page"><a href="/eudoxus_site/student/student.php">Φοιτητής</a></li>
     <li class="breadcrumb-item active" aria-current="page">Τροποποίηση Δήλωσης</li>
-        <li class="options">
-          <p id="option1"><a class="badge badge-light" href="#">ΒΟΗΘΕΙΑ</a></p>
-          <p id="option12"><a class="badge badge-light" href="#">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>
-        </li>
   </ol>
 </nav>
 

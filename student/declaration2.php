@@ -10,12 +10,11 @@ include_once('../partials/header.php');
     <li class="breadcrumb-item"><a href="/eudoxus_site/landing.php">Αρχική</a></li>
     <li class="breadcrumb-item" aria-current="page"><a href="/eudoxus_site/student/student.php">Φοιτητής</a></li>
     <li class="breadcrumb-item active" aria-current="page">Δήλωση Συγγραμμάτων</li>
-        <li class="options">
-          <p id="option1"><a class="badge badge-light" href="#">ΒΟΗΘΕΙΑ</a></p>
-          <p id="option12"><a class="badge badge-light" href="#">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a></p>
-        </li>
+        
   </ol>
 </nav>
+
+<br>
 
 
 
@@ -63,8 +62,7 @@ include_once('../partials/header.php');
 
 
 <div id="back2">
-    <a href="declaration.php">
-        <button  type="button" class="btn btn-secondary btn-md">&#8678;Πίσω</button>
+    <a href="declaration.php" class="previous2"><i style="font-size:36px" class="fas fa-angle-left"></i></a>
     </a>
 </div>
 

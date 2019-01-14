@@ -27,6 +27,8 @@
 
     <link href="../css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <script src="../student/student.js"></script>
   </head>
@@ -101,7 +103,7 @@
           </div>
         </li>
              <?php if(isset($_SESSION['login_user'])){  ?>
-                    <li class="signUpIn" ><a  class="badge badge-light" href="/eudoxus_site/logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-user-plus"></i></a></li>
+                    <li class="signUpIn" ><a  class="badge badge-light" href="/eudoxus_site/logout.php">ΑΠΟΣΥΝΔΕΣΗ<i class="fas fa-sign-out-alt"></i></a></li>
             <?php }
              else {   ?>
                     <li class="signUpIn"><a class="badge badge-light" href="/eudoxus_site/login.php">ΕΙΣΟΔΟΣ<i class="fas fa-user"></i></a></li>
@@ -113,12 +115,15 @@
 
 </nav>
 
-
 <?php if(isset($_SESSION['login_user'])){ ?>
       <div id="profile">
         Συνδεδεμένος ως <?php echo $_SESSION['login_user']; ?>
-          <a href="/eudoxus_site/edit_profile.php" class="badge badge-light" >
-            Επεξεργασία Προφίλ
-          </a>
+          <a href="/eudoxus_site/edit_profile.php" style='color:black;' >
+          <i class="fa fa-user-circle-o"></i>
+          </a><br>
+          <p class="options">
+          <a class="badge badge-light" href="/">ΒΟΗΘΕΙΑ</a>
+           <a class="badge badge-light" href="/eudoxus_site/search.php">ΑΝΑΖΗΤΗΣΗ ΒΙΒΛΙΩΝ</a>
+        </p>
       </div>
 <?php } ?>

@@ -103,8 +103,8 @@ if(isset($_GET["search"])) {
             $resultCheck= mysqli_num_rows($result);
             echo "<p class='wrap container' style='align:center;color:#bfbfbf;'>".$resultCheck." Αποτελέσματα:</p>";
             if ($resultCheck > 0) {
-                echo "<div class='container' id='rcorners' style='width:19%;clear: both;'> ";
                 while($row= mysqli_fetch_assoc($result)){
+                    echo "<div class='container' id='rcorners' style='width:19%;clear: both;'> ";
                     echo '<p style="color :#595959;">';
                     echo "<b>Τίτλος:</b> ".$row["title"]." <br>";  
                     echo "<b>Συγγραφέας: </b>".$row["author"]." <br>";
@@ -124,8 +124,8 @@ if(isset($_GET["search"])) {
             $resultCheck= mysqli_num_rows($result);
             echo "<p class='wrap container' style='align:center;color:#bfbfbf;'>".$resultCheck." Αποτελέσματα:</p>";
             if ($resultCheck > 0) {
-                echo "<div class='container' id='rcorners' style='width:19%;clear: both;'> ";
                 while($row= mysqli_fetch_assoc($result)){
+                    echo "<div class='container' id='rcorners' style='width:19%;clear: both;'> ";
                     echo '<p style="color :#595959;">';
                     echo "<b>Όνομα:</b> ".$row["Name"]." <br>";      
                     echo "<b>Επίθετο:</b> ".$row["Surname"]." <br>";
